@@ -8,18 +8,20 @@
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="../favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
     <div class="container">
         <div class="nav">
-            <a href="/EMPRESA-X/index.html"><img src="../logo.svg" alt=""></a>
+            <a href="/EMPRESA-X/index.html"><img src="/EMPRESA-X/logo.svg" alt=""></a>
             <button id="inicio">Início <i class="fa fa-home" aria-hidden="true" style="font-size: 30px;"></i></button>
             <a href="/EMPRESA-X/account/"><button>Minha Conta <i class="fa fa-user" aria-hidden="true" style="font-size: 30px;"></i></button></a>
             <span>
                 <p>Suporte & Ajuda</p>
                 <p>Termos & Serviços</p>
             </span>
+            <b>Densenvolvido por<br>caiuslenda14 <i class="fa fa-github"></i><br>2025</b>
             <img src="" alt="">
         </div>
         <div class="home">
@@ -31,6 +33,7 @@
             <div class="inicio">
                 <h1>Bem vindo ao <span>EMPRESA-X</span>, Melhor sistema de gerenciamento empresarial.</h1>
                 <img src="/EMPRESA-X/man.avif" alt="">
+                <p id="time"></p>
             </div>
         </div>
     </div>
@@ -48,6 +51,21 @@
     let numer = sessionStorage.getItem("numer")
     let visor = document.getElementById("nameShow")
     visor.innerHTML=nome
+
+    // HORA
+    function atualizarHora() {
+      const agora = new Date();
+      const horas = agora.getHours().toString().padStart(2, '0');
+      const minutos = agora.getMinutes().toString().padStart(2, '0');
+      const segundos = agora.getSeconds().toString().padStart(2, '0');
+      const horaFormatada = `${horas}:${minutos}:${segundos}`;
+
+      document.getElementById('time').textContent = horaFormatada;
+    }
+
+    // Atualiza imediatamente e depois a cada segundo
+    atualizarHora();
+    setInterval(atualizarHora, 1000);
 </script>
 
 </html>

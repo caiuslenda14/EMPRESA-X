@@ -49,11 +49,17 @@ body{
     #inicio{
         text-decoration-line: underline;
     }
+    b{
+        align-self: center;
+        position: absolute;
+        bottom: 15px;
+        color: #ffffff1e;
+    }
 }
 .home{
     align-items: center;
     height: 100vh;
-    background-color: white;
+    background-image: linear-gradient(to bottom, #011c3a49, #011D3A), url(background.jpg);
     position: relative;
     width: 100%;
     img{
@@ -62,7 +68,7 @@ body{
         width: 60%;
     }
     h1{
-        color: #011D3A;
+        color: #ffffff;
     }
     .text{
         margin-top: 8%;
@@ -76,7 +82,7 @@ body{
         padding: 20px;
         border-radius: 15px;
         width: 70%;
-        background-color: rgba(0, 0, 0, 0.144);
+        background-color: #011c3ab6;
         h1{
             font-weight: 100;
         }
@@ -92,6 +98,9 @@ body{
         }
         span{
             font-weight: 900;
+        }
+        p{
+            color: rgba(255, 255, 255, 0.315);
         }
     }
 }

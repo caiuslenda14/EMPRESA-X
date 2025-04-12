@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="../favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
@@ -20,7 +21,7 @@
                 <p>Suporte & Ajuda</p>
                 <p>Termos & Serviços</p>
             </span>
-            <img src="" alt="">
+            <b>Densenvolvido por<br>caiuslenda14 <i class="fa fa-github"></i><br>2025</b>
         </div>
         <div class="home">
             <img src="homeTopGradient.svg" alt="">
@@ -30,20 +31,21 @@
             <div class="infos">
                 <div class="info">
                     <h1>Nome:</h1>
-                    <p id="nomeLocal"></p>
+                    <input type="text" id="nomeLocal">
                 </div>
                 <div class="info">
                     <h1>Email:</h1>
-                    <p id="emailLocal"></p>
+                    <input type="text" id="emailLocal">
                 </div>
                 <div class="info">
                     <h1>Senha:</h1>
-                    <p id="senhaLocal"></p>
+                    <input type="text" id="senhaLocal">
                 </div>
                 <div class="info">
                     <h1>Telefone:</h1>
-                    <p id="telLocal"></p>
+                    <input type="text" id="telLocal">
                 </div>
+                <button onclick="salvar()">Salvar</button>
             </div>
         </div>
     </div>
@@ -59,17 +61,24 @@
     let email = sessionStorage.getItem("email")
     let senha = sessionStorage.getItem("senha")
     let numer = sessionStorage.getItem("numer")
-    // DETERMINAR P
-    let nomeLocal = document.getElementById("nomeLocal")
-    let emailLocal = document.getElementById("emailLocal")
-    let senhaLocal = document.getElementById("senhaLocal")
-    let telLocal = document.getElementById("telLocal")
-    // DETERMINAR DADO IGUAL A P
-    nomeLocal.innerHTML=nome
-    emailLocal.innerHTML=email
-    senhaLocal.innerHTML=senha
-    telLocal.innerHTML=numer
 
+    // DETERMINAR INPUT
+    document.getElementById("nomeLocal").value = nome
+    document.getElementById("emailLocal").value = email
+    document.getElementById("senhaLocal").value = senha
+    document.getElementById("telLocal").value = numer
+
+    function salvar(){
+        let nome = document.getElementById("nomeLocal").value
+        let email = document.getElementById("emailLocal").value
+        let senha = document.getElementById("senhaLocal").value
+        let tel = document.getElementById("telLocal").value
+        sessionStorage.setItem("nome", nome)
+        sessionStorage.setItem("email", email)
+        sessionStorage.setItem("senha", senha)
+        sessionStorage.setItem("numer", tel)
+        window.location.href="/EMPRESA-X/account/"
+    }
 </script>
 
 </html>
