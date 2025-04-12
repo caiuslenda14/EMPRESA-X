@@ -1,0 +1,124 @@
+* {
+    margin: 0;
+}
+
+body {
+    font-family: arial;
+    background: linear-gradient(to bottom, #044FA0, #011D3A);
+}
+
+/* DESKTOP */
+
+@media screen {
+    body {
+        height: 100vh;
+    }
+
+    .desktop {
+        text-align: center;
+        padding: 10% 0 0 0;
+        justify-self: center;
+        width: 50%;
+    }
+
+    .text-Img {
+        margin-bottom: 5%;
+        justify-content: center;
+        display: flex;
+
+        img {
+            transition: 0.5s;
+            cursor: pointer;
+            margin-left: 15%;
+            width: 20%;
+        }
+        img:hover{
+            transition: 0.5s;
+            transform: scale(1.2);
+        }
+    }
+
+    .text {
+
+        h1,p {font-family: "M PLUS 1", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: <weight>;
+            font-style: normal;
+            cursor: default;
+            color: white;
+            text-align: justify;
+        }
+
+        h1 {
+            margin-top: 15px;
+            font-size: 300%;
+            font-weight: 1000;
+            text-transform: uppercase;
+            line-height: 100%;
+        }
+
+        p {
+            margin: 25px 0 0 15px;
+        }
+    }
+
+    .bottons {
+        display: inline;
+        /* display: flex; */
+        grid-template-columns: 2fr 1fr;
+        font-weight: 1000;
+
+        button {
+            width: 40%;
+            max-width: 350px;
+            color: white;
+            background-color: #044FA0;
+        }
+
+        button:hover {
+            transition: 0.5s;
+            cursor: pointer;
+            background-color: #0073ee;
+            transform: scale(1.02);
+        }
+
+        button,input {
+            font-family: "M PLUS 1", sans-serif;
+            font-optical-sizing: auto;
+            font-style: normal;
+            border-radius: 15px;
+            border: none;
+            font-size: 200%;
+            margin: 10px;
+        }
+
+        input::placeholder {
+            color: #011c3a77;
+        }
+
+        input:focus {
+            transition: 1s;
+            outline: none;
+            color: #011c3ac2;
+        }
+
+        input:focus::placeholder {
+            transition: 1s;
+            color: #011c3ac2;
+        }
+
+        input {
+            padding: 20px 20px 10px 20px;
+        }
+
+        button {
+            font-weight: 600;
+            padding: 10px;
+        }
+    }
+}
+
+
+
+/* DEVICE */
+@media screen {}

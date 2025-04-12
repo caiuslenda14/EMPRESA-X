@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Início</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="../favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="nav">
+            <a href="../"><img src="../logo.svg" alt=""></a>
+            <a href="/home/"><button>Início <i class="fa fa-home" aria-hidden="true" style="font-size: 30px;"></i></button></a>
+            <button id="inicio">Minha Conta <i class="fa fa-user" aria-hidden="true" style="font-size: 30px;"></i></button>
+            <span>
+                <p>Suporte & Ajuda</p>
+                <p>Termos & Serviços</p>
+            </span>
+            <img src="" alt="">
+        </div>
+        <div class="home">
+            <img src="homeTopGradient.svg" alt="">
+            <div class="text">
+                <h1>Minhas Informações:</h1>
+            </div>
+            <div class="infos">
+                <div class="info">
+                    <h1>Nome:</h1>
+                    <p id="nomeLocal"></p>
+                </div>
+                <div class="info">
+                    <h1>Email:</h1>
+                    <p id="emailLocal"></p>
+                </div>
+                <div class="info">
+                    <h1>Senha:</h1>
+                    <p id="senhaLocal"></p>
+                </div>
+                <div class="info">
+                    <h1>Telefone:</h1>
+                    <p id="telLocal"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+</body>
+<script>
+    // DEFININDO VARIAVEIS E DADOS
+    let nome = sessionStorage.getItem("nome")
+    let email = sessionStorage.getItem("email")
+    let senha = sessionStorage.getItem("senha")
+    let numer = sessionStorage.getItem("numer")
+    // DETERMINAR P
+    let nomeLocal = document.getElementById("nomeLocal")
+    let emailLocal = document.getElementById("emailLocal")
+    let senhaLocal = document.getElementById("senhaLocal")
+    let telLocal = document.getElementById("telLocal")
+    // DETERMINAR DADO IGUAL A P
+    nomeLocal.innerHTML=nome
+    emailLocal.innerHTML=email
+    senhaLocal.innerHTML=senha
+    telLocal.innerHTML=numer
+
+</script>
+
+</html>

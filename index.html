@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Empresa X</title>
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+
+    <!-- FONT MPLUS 1 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+1:wght@100..900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- DESKTOP ABAIXO -->
+
+    <div class="desktop">
+        <div class="text-Img">
+            <div class="text">
+                <h1 title="Controle e Organização de Dados Sem Complicação!">Controle e<br>Organização<br>de Dados Sem<br>Complicação!</h1>
+                <p title="A plataforma perfeita para estagiários e gestores se conectarem, colaborarem e acompanharem o desenvolvimento de forma simples e intuitiva.">A plataforma perfeita para estagiários e<br>gestores se conectarem, colaborarem e<br>acompanharem
+                    o desenvolvimento de forma<br>simples e intuitiva.</p>
+            </div>
+            <img src="deviceMockup.svg" alt="" title="Empresa X também para mobile!">
+        </div>
+        <div class="bottons">
+            <input type="text" placeholder="Digite seu email:" id="input">
+            <button onclick="checarInput()">COMECE GRÁTIS</button>
+            <a href="/login/"><button>Login</button></a>
+            <button>Mais</button>
+        </div>
+    </div>
+
+    <!-- DEVICE ABAIXO -->
+
+    <div class="device">
+
+    </div>
+    <script>
+        function checarInput() {
+            let input = document.getElementById("input").value
+            if (!input.includes("@") || !input.includes(".") || input < 10) {
+                window.location.href="/signup/index.html"
+            } else {
+                sessionStorage.setItem("emailSet", input)
+                window.location.href="/signup/index.html"
+            }
+        }
+    </script>
+</body>
+
+</html>

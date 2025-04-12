@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LOGIN </title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="../favicon.png" type="image/x-icon">
+</head>
+
+<body>
+    <a href="../"><img src="../logo.svg" alt=""></a>
+    <div class="cadastro">
+        <h1>Login</h1>
+        <p>Digite os seus dados de acesso no campo abaixo.</p>
+        <h2>Email</h2>
+        <input type="text" placeholder="Digite seu email:" id="emailbox">
+        <h2>Senha</h2>
+        <input type="password" placeholder="Digite sua senha:" id="senha">
+        <button onclick="login()">Cadastrar</button>
+    </div>
+</body>
+<script>
+    let email = sessionStorage.getItem("emailSet")
+    document.getElementById("emailbox").value = email
+    function login() {
+        let emailCheck = document.getElementById("emailbox").value
+        let senhaCheck = document.getElementById("senha").value
+        let email = sessionStorage.getItem("email")
+        let senha = sessionStorage.getItem("senha")
+        if (email != emailCheck || senha!=senhaCheck){
+            alert("Email ou senha incorretos. Tente novamente.")
+        }else{
+            window.location.href="/home"
+        }
+    }
+</script>
+
+</html>
