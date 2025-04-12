@@ -11,10 +11,19 @@ body {
 }
 
 .container {
+    h2{
+        color: white;
+    }
     h1 {
         color: white;
     }
-
+    b{
+        text-align: center;
+        align-self: center;
+        position: absolute;
+        bottom: 15px;
+        color: #ffffff1e;
+    }
     display: flex;
     flex-direction: column;
     padding: 2%;
@@ -38,6 +47,7 @@ body {
         cursor: default;
         width: 40%;
     }
+
     #fachada:hover {
         transition: 0.5s;
         transform: scale(1.005);
@@ -62,11 +72,7 @@ body {
 
     }
 }
-h2{
-    font-weight: 400;
-    color: white;
-    margin-top: 5%;
-}
+
 #insta:hover {
     color: white;
     background: radial-gradient(circle at 30% 107%,
@@ -104,12 +110,14 @@ h2{
 .sobre {
     justify-content: flex-start;
     display: flex;
-    h1{
+
+    h1 {
         font-weight: 100;
         text-align: justify;
         margin-left: 2%;
     }
-    span{
+
+    span {
         font-weight: 700;
         color: #011D3A;
     }
