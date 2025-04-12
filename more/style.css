@@ -1,0 +1,116 @@
+body {
+    font-family: arial;
+    color: #011D3A;
+    /* background: linear-gradient(to bottom, #044FA0, #011D3A); */
+    height: 100vh;
+    background-image: linear-gradient(to bottom, #011c3a49, #011D3A), url(background.jpg);
+}
+
+* {
+    margin: 0;
+}
+
+.container {
+    h1 {
+        color: white;
+    }
+
+    display: flex;
+    flex-direction: column;
+    padding: 2%;
+
+    img#home {
+        border-radius: 15px;
+        background-color: #011c3ade;
+        transition: 0.5s;
+        cursor: pointer;
+        width: 5%;
+        margin-bottom: 20px;
+    }
+
+    img#home:hover {
+        transition: 0.5s;
+        transform: scale(1.1);
+    }
+
+    #fachada {
+        border-radius: 15px;
+        cursor: default;
+        width: 40%;
+    }
+    #fachada:hover {
+        transition: 0.5s;
+        transform: scale(1.005);
+    }
+
+    .social-media {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .social {
+        transition: 0.1s;
+        font-size: 50px;
+        text-align: center;
+        width: 5%;
+        cursor: pointer;
+        border-radius: 15px;
+        margin: 10px;
+        padding: 10px;
+        background-color: #ffffff;
+        box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.25);
+
+    }
+}
+h2{
+    font-weight: 400;
+    color: white;
+    margin-top: 5%;
+}
+#insta:hover {
+    color: white;
+    background: radial-gradient(circle at 30% 107%,
+            #fdf497 0%,
+            #fdf497 5%,
+            #fd5949 45%,
+            #d6249f 60%,
+            #285AEB 90%);
+}
+
+#face:hover {
+    color: #1877F2;
+}
+
+#twit:hover {
+    color: white;
+    background-color: #1DA0F1;
+}
+
+#tele:hover {
+    color: #2BA4DF;
+    background-color: white;
+}
+
+#whats:hover {
+    color: white;
+    background-color: #2CD46B;
+}
+
+.social:hover {
+    transition: 0.2s;
+    transform: scale(1.5);
+}
+
+.sobre {
+    justify-content: flex-start;
+    display: flex;
+    h1{
+        font-weight: 100;
+        text-align: justify;
+        margin-left: 2%;
+    }
+    span{
+        font-weight: 700;
+        color: #011D3A;
+    }
+}
